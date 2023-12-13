@@ -1,0 +1,14 @@
+{
+    "name": "Manac Travel N Tour",
+    "short_name": "Manac",
+    "icons": [
+       {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+       }
+    ],
+    "theme_color": "#1deb16",
+    "background_color": "#1deb16 ",
+    "display": "standalone"
+ }

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <style>
+      .error{
+    color:red !important;
+  }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css"
+      integrity="sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+
+    <!-- Box Icon Link -->
+    <!-- Box Icon Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      
+    />    
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/favicon-32x32.png">
+
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="{% static 'css/style3.css' %}" >
+    <title>Manac Travel N Tour | Login</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <!-- {% if is_login %} -->
+      <!-- <div class="form-container sign-up-container">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <h1>Create Account</h1>
+          <div class="social-container">
+            <a href="www.facebook.com" class="social"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="www.gmail.com" class="social"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+            <a href="www.linkedin.com" class="social"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+          <span>or use your email for registration</span>
+          {% for message in messages %}
+          <span class="error"><p>{{ message }}</p></span>           
+          {% endfor %}
+          <input type="text" placeholder="Full Name" id="fullname" name="fullname" required/>
+          <input type="text" placeholder="Username" id="email" name="user_name" required/>
+          <input type="password" placeholder="Password" id="password" name="password1" required/>
+          <input type="password" placeholder="Confrim Password" id="password" name="password2" required/>
+          <button type="submit" id="signUp_button">Sign Up</button>
+        </form>
+      </div> -->
+      <!-- {% else %} -->
+      <div class="form-container sign-in-container">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <h1>Sign in</h1>
+          <div class="social-container">
+            <a href="" class="social"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="" class="social"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+            <a href="" class="social"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+          <span>or use your account</span>
+          {% for message in messages %}
+          {% if message.tags == 'error' %}
+          <span class="error"><p>{{ message }}</p></span>
+          {% endif %}           
+          {% endfor %}
+          <input type="text" placeholder="Username" name="username" id="email"/>
+          <input type="password" placeholder="Password" name="password"id="password"/>
+          <a href="#">Forgot your password?</a>
+          <button >Sign In</button>
+        </form>
+      </div>
+      <!-- {% endif %} -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <a href="{% url 'LoginPage' %}" class="go-Signin" id="signIn">Sign In </a>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us.</p>
+            <a href="{% url 'SignUpPage' %}" class="go-Signup" id="signUp">Sign up </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
