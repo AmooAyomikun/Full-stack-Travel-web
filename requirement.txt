@@ -1,0 +1,12 @@
+asgiref
+dj-database-url
+Django
+gunicorn
+packaging
+psycopg2-binary
+python-decouple
+pytz==2023.3.post1
+sqlparse
+typing_extensions
+tzdata
+whitenoise
